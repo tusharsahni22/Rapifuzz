@@ -17,6 +17,8 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
+  padding-top: 20px;
 `;
 
 
@@ -30,6 +32,11 @@ const Select = styled.select`
   padding: 10px;
   border: 1px solid #ff69b4;
   border-radius: 4px;
+`;
+
+const Title = styled.h1`
+  color: #ff69b4;
+  margin-bottom: 20px;
 `;
 
 const Button = styled.button`
@@ -142,6 +149,7 @@ const SignupForm = () => {
 
   return (
     <Wrapper>
+      <Title>Sign Up</Title>
     <Form onSubmit={handleSubmit}>
       {errors.username && <ErrorMessage>{errors.username}</ErrorMessage>}
       <Input
