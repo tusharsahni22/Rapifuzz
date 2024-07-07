@@ -91,6 +91,7 @@ const Login = () => {
         />
         {errors.password && <ErrorMessage>{errors.password}</ErrorMessage>}
         <Button type="submit">Login</Button>
+        <Button onClick={() => navigate('/reset-password')}>Reset Password</Button>
       </Form>
     </Container>
   );
